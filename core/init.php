@@ -1,6 +1,6 @@
 <?php
 
-session_start(); // global settings
+session_start(); 
 
 $GLOBALS['config'] = array(
   'mysql' => array(
@@ -30,7 +30,6 @@ if (Cookie::exists(Config::get('remember/cookie_name')) && !Session::exists(Conf
   $hash = Cookie::get(Config::get('remember/cookie_name'));
   $hashCheck = DB::getInstance()->get('users_session', array('hash', '=', $hash));
   if ($hashCheck->count()) {
-    //echo 'Hash matches, log user in';
     $user = new User($hashCheck->first()->user_id);
     $user->login();
   }
