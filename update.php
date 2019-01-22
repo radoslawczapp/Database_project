@@ -31,7 +31,7 @@ if(Input::exists()) {
         $user->update(array(
           'name' => Input::get('name')
         ));
-        Session::flash('home', 'Your details have been updated.');
+        Session::flash('home', '<p class="label label-success">Your details have been updated.</p>');
         Redirect::to('index.php');
       } catch (Exception $e) {
         die($e->getMessage());
@@ -47,7 +47,7 @@ if(Input::exists()) {
 ?>
 
 <form class="" action="" method="post">
-  <div class="field form-group">
+  <div class="col-xs-4">
     <label for="name">Name</label>
     <input type="text" name="name" class="form-control" value="<?php echo escape($user->data()->name); ?>">
 
@@ -55,8 +55,6 @@ if(Input::exists()) {
     <input type="submit" value="Update" class="btn btn-primary">
   </div>
 </form>
-
-<a href="index.php">Back to Index</a>
 
 <?php
   echo "</div> <!-- //maincontainer -->";

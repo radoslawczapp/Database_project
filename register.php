@@ -1,21 +1,13 @@
 <?php
 
-// Core Initialization
 require_once 'core/init.php';
 
 echo "<div class='maincontainer'>";
 
-// Header
 include 'includes/header.php';
-
-//var_dump(Token::check(Input::get('token')));
 
   if (Input::exists()) {
     if (Token::check(Input::get('token'))) {
-      //echo "Submitted!";
-      //echo Input::get('username');
-      //echo Input::get('password');
-      //echo Input::get('password_again');
       $validate = new Validate();
       $validation = $validate->check($_POST, array(
         'username' => array(
@@ -40,19 +32,10 @@ include 'includes/header.php';
       ));
 
       if ($validation->passed()) {
-          //echo "Passed!";
-          //Session::flash('success', 'You registered successfully!');
-          //header('Location: index.php');
           $user = new User();
           try {
 
             $salt = Hash::salt(32);
-
-            //echo "<meta charset='utf-8'><pre>";
-            //print_r($salt);
-            //echo "</pre>";
-
-            //die();
 
             $user->create(array(
               'username' => Input::get('username'),
@@ -66,7 +49,7 @@ include 'includes/header.php';
 
             Session::flash('home', 'You have been registered and can now log in!');
             //header('Location: index.php');
-            Redirect::to(404); // 'index.php'
+            Redirect::to('index.php');
 
           } catch (Exception $e) {
             die($e->getMessage());
@@ -78,9 +61,8 @@ include 'includes/header.php';
           echo $error, '<br>';
         }
       }
-
-    } // fim segundo if
-  } // fim primeiro if
+    }
+  }
 ?>
 
 <form class="" action="" method="post">

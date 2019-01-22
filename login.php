@@ -24,7 +24,6 @@ if (Input::exists()) {
       $login = $user->login(Input::get('username'), Input::get('password'), $remember);
 
       if ($login) {
-        //echo "logado!";
         Redirect::to('index.php');
       } else {
         echo "<p class='label label-danger'>Sorry, logging in failed.</p><br><br>";

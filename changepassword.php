@@ -34,7 +34,7 @@ if (Input::exists()) {
     ));
     if($validation->passed()) {
       if (Hash::make(Input::get('password_current'), $user->data()->salt) !== $user->data()->password) {
-        echo 'Your current password is wrong.';
+        echo '<p class="label label-danger">Your current password is wrong.</p><br><br>';
       } else {
         // password user change
         // echo 'Ok!';
@@ -44,7 +44,7 @@ if (Input::exists()) {
           'salt' => $salt
         ));
 
-        Session::flash('home', 'Your password has been changed.');
+        Session::flash('home', '<p class="label label-success">Your password has been changed.</p><br><br>');
         Redirect::to('index.php');
 
 

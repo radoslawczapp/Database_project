@@ -32,18 +32,21 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
+
           </ul>
 
           <?php $user = new User(); if ($user->isLoggedIn()) { ?>
           <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
+
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo escape($user->data()->name); ?> <span class="caret"></span></a>
 
               <ul class="dropdown-menu">
-                <li><a href="profile.php?user=<?php echo escape($user->data()->username); ?>">Profile <?php echo escape($user->data()->name); ?></a></li>
-                <li><a href="update.php">Update</a></li>
+                <li><a href="add.php">Add review</a></li>
+                <li><a href="profile.php?user=<?php echo escape($user->data()->username); ?>">Profile </a></li>
+                <li><a href="update.php">Update Name</a></li>
                 <li><a href="changepassword.php">Change Password</a></li>
                 <li><a href="logout.php">Logout</a></li>
 

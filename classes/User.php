@@ -69,11 +69,9 @@ class User {
     } else {
 
       $user = $this->find($username);
-      //print_r($this->_data);]
 
       if($user) {
         if($this->data()->password === Hash::make($password, $this->data()->salt)) {
-          //echo "Ok!";
           Session::put($this->_sessionName, $this->data()->id);
           if ($remember) {
             $hash = Hash::unique();
@@ -97,19 +95,25 @@ class User {
     return false;
   }
 
-  public function hasPermission($key)
-  {
-    $group = $this->_db->get('groups', array('id', '=', $this->data()->group));
-    // print_r($group->first());
-    if ($group->count()) {
-      $permissions = json_decode($group->first()->permissions, true);
-      //print_r($permissions);
-      if ($permissions[$key] == true) {
-        return true;
-      }
-    }
-    return false;
-  }
+  // public function hasPermission($key)
+  // {
+  //   $group = $this->_db->get('groups', array('id', '=', $this->data()->group));
+  //   echo '<pre>';
+  //   print_r($group->count());
+  //   echo '</pre>';
+  //   echo '<pre>';
+  //   $permissions = json_decode($group->first()->permissions, true);
+  //   print_r($permissions);
+  //   echo '</pre>';
+  //   if ($group->count()) {
+  //     $permissions = json_decode($group->first()->permissions, true);
+  //
+  //     if ($permissions[$key] == true) {
+  //       return true;
+  //     }
+  //   }
+  //   return false;
+  // }
 
   public function exists()
   {
