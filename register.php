@@ -47,7 +47,7 @@ include 'includes/header.php';
               //'' => '',
             ));
 
-            Session::flash('home', 'You have been registered and can now log in!');
+            Session::flash('home', '<p class="label label-success">You have been registered and can now log in!</p>');
             //header('Location: index.php');
             Redirect::to('index.php');
 

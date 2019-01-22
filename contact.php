@@ -59,7 +59,7 @@ include 'includes/header.php';
     margin:0;
     padding:0;
     line-height:100px;
-    font-size:24px;
+    font-size:22px;
     color:#fff;
 }
 .contact .box .details:nth-child(2) .details {
