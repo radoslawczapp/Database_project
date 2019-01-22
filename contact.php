@@ -11,7 +11,7 @@ include 'includes/header.php';
 <style>
 .contact {
     width:900px;
-    margin:250px auto 0;
+    margin:150px auto 0;
     display:flex;
 }
 .contact .box {
@@ -73,7 +73,7 @@ include 'includes/header.php';
     <div class="contact">
 
     	<div class="box" id="name">
-            <label for="name" style="color: white; font-size:25px; text-align: center; vertical-align:middle; margin-top: 30px;">Fullname</label>
+            <label for="name" style="color: white; font-size:25px; text-align: center; vertical-align:middle; margin-top: 30px;">Author</label>
     		<div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
     		<div class='details'><h3>Radosław Czapp</h3></div>
     	</div>

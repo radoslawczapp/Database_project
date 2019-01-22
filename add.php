@@ -16,7 +16,7 @@ include 'includes/header.php';
     $data = $user->data();
   // }
   $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
-  echo $id;
+
   if($id == 0){
             if(Input::exists()){
               try {
