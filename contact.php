@@ -71,17 +71,21 @@ include 'includes/header.php';
 </style>
 
     <div class="contact">
-    	<div class="box">
+
+    	<div class="box" id="name">
+            <label for="name" style="color: white; font-size:25px; text-align: center; vertical-align:middle; margin-top: 30px;">Fullname</label>
     		<div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
     		<div class='details'><h3>Radosław Czapp</h3></div>
     	</div>
 
-    	<div class="box">
+    	<div class="box" id="number">
+            <label for="number" style="color: white; font-size:25px; text-align: center; vertical-align:middle; margin-top: 30px;">Phone number</label>
     		<div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
     		<div class='details'><h3>+48 505 153 346</h3></a></div>
     	</div>
 
-    	<div class="box">
+    	<div class="box" id="email">
+            <label for="email" style="color: white; font-size:25px; text-align: center; vertical-align:middle; margin-top: 30px;">Email adress</label>
     		<div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
     		<div class='details'><h3>czappradoslaw@gmail.com</h3></div>
     	</div>

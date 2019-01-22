@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="shortcut icon" href="https://icons-for-free.com/free-icons/png/512/1055107.png" />
+    <script language="JavaScript" type="text/javascript">
+        function checkDelete(){
+            return confirm('Are you sure you want to delete this review?');
+        }
+    </script>
 
     <style media="screen">
       .maincontainer {

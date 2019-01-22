@@ -40,8 +40,8 @@ $reviews = DB::getInstance()->query('SELECT * FROM bookstand');
                 <td><?php echo $review->author ?></td>
                 <td><?php echo $review->review ?></td>
 <?php if($user->isLoggedIn()){ ?>
-                <td style="text-align: center;"><a href="delete.php?id=<?php echo $review->id; ?>" class="btn btn-danger m-2" onclick="return confirm(\'Are you sure you want to delete?\');">Delete</a></td>
-                <td style="text-align: center;"><a href="edit.php?id=<?php echo $review->id; ?>" class="btn btn-success m-2">Edit</a></td>
+                <td style="text-align: center;"><a href="delete.php?id=<?php echo $review->id; ?>" class="btn btn-danger m-2" onclick="return checkDelete()">Delete</a></td>
+                <td style="text-align: center;"><a href="add.php?id=<?php echo $review->id; ?>" class="btn btn-success m-2">Edit</a></td>
 <?php } ?>
             </tr>
         </tbody>
