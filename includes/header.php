@@ -7,6 +7,7 @@
     <title>Book Reviews</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="shortcut icon" href="https://icons-for-free.com/free-icons/png/512/1055107.png" />
 
     <style media="screen">
       .maincontainer {
@@ -28,13 +29,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Book Reviews</a>
+
+          <a class="navbar-brand" href="index.php">
+
+              Book Reviews
+          </a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="about.php">About</a></li>
+            <li><a href="contact.php">Contact</a></li>
 
           </ul>
 
